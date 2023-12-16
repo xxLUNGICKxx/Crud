@@ -1,0 +1,29 @@
+﻿<Application x:Class="homework.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:homework"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <DataTemplate x:Key="listWithTable">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <TextBlock  Grid.Column="0"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15">    
+                    <Run Text="ID:" ></Run>
+                </TextBlock>
+                <TextBlock Margin="0 30 0 0"  Grid.Column="0"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15">    
+                    <Run Text="{Binding Id}" ></Run>
+                </TextBlock>
+                <TextBlock  Grid.Column="1" Margin="25 0 0 0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15">    
+                    <Run Text="Name:" ></Run>
+                </TextBlock>
+                    <TextBlock Grid.Column="1" Margin="10 30 0 0"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15">    
+                    <Run Text="{Binding Name}" ></Run>
+                </TextBlock>
+            </Grid>
+        </DataTemplate>
+    </Application.Resources>
+</Application>
